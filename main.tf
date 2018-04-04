@@ -59,7 +59,7 @@ resource "datadog_timeboard" "rpc" {
     autoscale = true
 
     request {
-      q    = "sum:rpc.server.count{$cluster,$class-name,$method-name} by {host,name,classname,methodname}"
+      q    = "sum:rpc.server.count{$cluster,$classname,$methodname} by {host,name,classname,methodname}"
       type = "line"
     }
   }
@@ -70,7 +70,7 @@ resource "datadog_timeboard" "rpc" {
     autoscale = true
 
     request {
-      q    = "max:rpc.server.ltcy.p95{$cluster,$class-name,$method-name} by {host,name,classname,methodname}"
+      q    = "max:rpc.server.ltcy.p95{$cluster,$classname,$methodname} by {host,name,classname,methodname}"
       type = "line"
     }
   }
@@ -81,7 +81,7 @@ resource "datadog_timeboard" "rpc" {
     autoscale = true
 
     request {
-      q    = "sum:rpc.server.exc.count{$cluster,$class-name,$method-name} by {host,name,classname,methodname}"
+      q    = "sum:rpc.server.exc.count{$cluster,$classname,$methodname} by {host,name,classname,methodname}"
       type = "line"
     }
   }
