@@ -1,7 +1,7 @@
 variable "product_domain" {
-  default = "ENT"
+  default = "BEI"
 }
 
 variable "cluster" {
-  default = "entcurr-app"
+  default = "beical-app"
 }
