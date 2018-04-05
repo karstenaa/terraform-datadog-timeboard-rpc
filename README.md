@@ -9,7 +9,7 @@ Usage
 -----
 
 ```hcl
-module "timeboard_rpc_entcurr-app" {
+module "timeboard_rpc_beical-app" {
   source         = "github.com/traveloka/terraform-datadog-timeboard-rpc.git?ref=0.1.0"
   product_domain = "${var.product_domain}"
   cluster        = "${var.cluster}"
