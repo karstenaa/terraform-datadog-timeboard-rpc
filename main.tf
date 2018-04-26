@@ -1,4 +1,6 @@
 resource "datadog_timeboard" "rpc" {
+  count = "${var.enabled}"
+
   title       = "${var.product_domain} - ${var.cluster} - RPC"
   description = "A generated timeboard for RPC"
 
