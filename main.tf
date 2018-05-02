@@ -31,6 +31,11 @@ resource "datadog_timeboard" "rpc" {
       q    = "sum:rpc.client..count{$cluster} by {host,name,destnodeid}"
       type = "line"
     }
+
+    request {
+      q    = "sum:rpc.client.count{$cluster} by {host,name,destnodeid}"
+      type = "line"
+    }
   }
 
   graph {
